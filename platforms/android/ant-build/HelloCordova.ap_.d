@@ -40,6 +40,8 @@
 /Users/Dboody/Desktop/burst/platforms/android/assets/www/img/logo.png \
 /Users/Dboody/Desktop/burst/platforms/android/assets/www/js/index.js \
 /Users/Dboody/Desktop/burst/platforms/android/assets/www/js/parse.js \
+/Users/Dboody/Desktop/burst/platforms/android/assets/www/js/promise.js \
+/Users/Dboody/Desktop/burst/platforms/android/assets/www/js/record_parse_file.js \
 /Users/Dboody/Desktop/burst/platforms/android/assets/www/plugins/org.apache.cordova.file \
 /Users/Dboody/Desktop/burst/platforms/android/assets/www/plugins/org.apache.cordova.media-capture \
 /Users/Dboody/Desktop/burst/platforms/android/assets/www/plugins/org.apache.cordova.file/www \
