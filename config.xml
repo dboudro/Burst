@@ -8,5 +8,8 @@
         Apache Cordova Team
     </author>
     <content src="index.html" />
+    <feature name="Capture">
+      <param name="ios-package" value="CDVCapture" />
+    </feature>
     <access origin="*" />
 </widget>
