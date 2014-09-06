@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Proto </title>
+	</head>
+	<script src="js/jquery-2.1.1.min.js"> </script>
+	<script src="http://d3js.org/d3.v3.min.js"></script>
+	<style>
+	/* COLORS:
+	#c0392b - dark red
+	#E74C3C - light red
+		#2C3E50	- dark blue
+	#34495E - light blue
+		#27AE60	- Dark Green
+	#2ECC71 - Light Green
+			*/
+			/* * * * * * * * * * * * * * * * * INITIAL SETUP * * * * * * * * * * * * * * * */
+			* {
+			margin:0;
+			padding:0;
+			}
+			@font-face {
+				font-family: essential;
+				src: url("fonts/essential-light.ttf");
+			}
+			@font-face {
+				font-family: Proxima Nova Bold;
+				src: url(fonts/ProximaNovaBold.ttf);
+			}
+			@font-face {
+				font-family: Proxima Nova;
+				src: url(fonts/ProximaNova-Regular.otf);
+			}
+			@font-face {
+				font-family: Proxima Nova Light;
+				src: url(fonts/ProximaNovaLight.otf);
+			}
+			@font-face {
+				font-family: Proxima Nova Thin;
+				src: url(fonts/ProximaNovaThin.otf);
+			}
+			/* * * * * * * * * * * * * * * * * GLOBAL STYLING * * * * * * * * * * * * * * * */
+			.screen {
+				display: none;
+				height: 100vh;
+				width: 100vw;
+				background-color: #2C3E50;
+				text-align: center;
+			}
+			.tag {
+				font-family: Proxima Nova Light;
+				font-size: 14px;
+				background-color: #7F8C8D;
+				border-radius: 8px;
+				color: #ECF0F1;
+				padding: 2px 5px;
+				text-decoration: none;
+			}
+			.next{
+				position: fixed;
+				margin-top: 5px;
+				margin-left: 40vw;
+				opacity: .4;
+				font-family: Proxima Nova Light;
+				font-size: 14px;
+				background-color: #7F8C8D;
+				border-radius: 4px;
+				color: #ECF0F1;
+				padding: 2px 5px;
+				text-decoration: none;
+			}
+			.next:hover {
+				opacity: 1;
+			}
+			.tag:hover {
+				background-color: #657070;
+			}
+			.button {
+			height: 20vh;
+			margin: 0 auto 0 auto;
+			padding-top: 15vh;
+			}
+			/* 1 1 1 1 * * * * * * * * * * * * LOADING SCREEN * * * * * * * * * * * * * * * */
+			#loading-screen {
+				display: block;
+			}
+			/* 2 2 2 2 * * * * * * * * * * * * * MAIN SCREEN * * * * * * * * * * * * * * * * */
+			#main-screen {
+				/*	display: block; */
+			}
+			#play-button {
+			padding-top: 25vh;
+			display: block;
+			}
+			#record-buton {
+				display: block;
+			}
+			/* 3 3 3 3 * * * * * * * * * * * * * LISTEN SCREEN * * * * * * * * * * * * * * * * */
+			#listen-screen {
+				/* display: block; */
+			}
+			#tag-box {
+				margin: 0 auto 0 auto;
+				padding: 5vh 0 8vh 0;
+			}
+			#stop-button {
+				/* FIX */
+				height: 165px;
+				padding-left: 20px;
+			}
+			#spectrum {
+				width: 100vw;
+				opacity: .5;
+				margin-top: 5vh;
+			}
+	</style>
+	<body>
+		<!-- - - - - - - - - - - - - - - LOADING SCREEN - - - - - - - - - - - - -->
+		<div id="loading-screen" class="screen">
+			<a id="next1" href="#" class="next">Next</a>
+			<div class="bubble big-bubble"></div>
+			<div class="bubble medium-bubble"></div>
+			<div class="bubble small-bubble"></div>
+			
+		</div>
+		<!-- - - - - - - - - - - - - - - MAIN SCREEN - - - - - - - - - - - - -->
+		<div id="main-screen" class="screen">
+			<img id="play-button" class="button" src="images/play.png">
+			<img id="record-button" class="button"src="images/record.png">
+			<a id="next2" href="#" class="next">Next</a>
+		</div>
+		<!-- - - - - - - - - - - - - - - LISTEN SCREEN - - - - - - - - - - - - -->
+		<div id="listen-screen" class="screen">
+			<div id="tag-box">
+				<a href="#" class="tag">Funny</a>
+				<a href="#" class="tag">Annoying</a>
+				<a href="#" class="tag">Web-Design</a>
+				<a href="#" class="tag">Mom Gossip</a>
+			</div>
+			<img id="pause-button" class="button" src="images/pause.png">
+			<img id="stop-button" class-"button" src="images/stop.png">
+			<img id="spectrum" src="images/spectrum-gray.png">
+		</div>
+		<script>
+		/* * * * * * * * * * * * * * * * * * JAVASCRIPT * * * * * * * * * * * * * * * * */
+		$("#next1").click(function() {
+		$("#loading-screen").css("display","none");
+		$("#main-screen").show();
+		});
+					$("#next2").click(function() {
+		$("#main-screen").css("display","none");
+		$("#listen-screen").show();
+		});
+
+var data = [5];
+	var width = window.innerWidth - 20;
+var height = window.innerHeight - 20;
+
+var nodes = d3.range(200).map(function() { return {radius: Math.random() * 8 + 8}; }),
+    root = nodes[0],
+    color = d3.scale.category10();
+
+root.radius = 0;
+root.fixed = true;
+
+var force = d3.layout.force()
+    .gravity(0.05)
+    .charge(function(d, i) { return i ? 0 : -2000; })
+    .nodes(nodes)
+    .size([width, height]);
+
+force.start();
+
+
+var svg = d3.select("#loading-screen").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+
+
+
+svg.selectAll("circle")
+    .data(nodes.slice(1))
+  .enter().append("circle")
+    .attr("r", function(d) { return d.radius; })
+    .style("fill", function(d, i) { return "#3498DB" });
+
+force.on("tick", function(e) {
+  var q = d3.geom.quadtree(nodes),
+      i = 0,
+      n = nodes.length;
+
+  while (++i < n) q.visit(collide(nodes[i]));
+
+  svg.selectAll("circle")
+      .attr("cx", function(d) { return d.x; })
+      .attr("cy", function(d) { return d.y; });
+});
+
+svg.selectAll("circle")
+	.data(data)
+	.enter().append("circle")
+	.attr("cx", 150)
+	.attr("cy", 150)
+	.attr("r", 30)
+	.attr("fill", "red");
+
+function collide(node) {
+  var r = node.radius + 30,
+      nx1 = node.x - r,
+      nx2 = node.x + r,
+      ny1 = node.y - r,
+      ny2 = node.y + r;
+  return function(quad, x1, y1, x2, y2) {
+    if (quad.point && (quad.point !== node)) {
+      var x = node.x - quad.point.x,
+          y = node.y - quad.point.y,
+          l = Math.sqrt(x * x + y * y),
+          r = node.radius + quad.point.radius;
+      if (l < r) {
+        l = (l - r) / l * .5;
+        node.x -= x *= l;
+        node.y -= y *= l;
+        quad.point.x += x;
+        quad.point.y += y;
+      }
+    }
+    return x1 > nx2 || x2 < nx1 || y1 > ny2 || y2 < ny1;
+  };
+}
+		setTimeout(
+  function() 
+  {
+    force.gravity(-4.05);
+  }, 3000);
+
+</script>
+	</body>
+</html>
