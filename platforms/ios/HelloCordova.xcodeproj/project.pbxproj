@@ -43,6 +43,7 @@
 		13E3F097924B4B0B8AEE7C4C /* CDVAssetLibraryFilesystem.m in Sources */ = {isa = PBXBuildFile; fileRef = FF6661CF5E4340138A7FC6F5 /* CDVAssetLibraryFilesystem.m */; };
 		9922880C9C94494BB592F95E /* CDVCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D89D71182D840A683C190F6 /* CDVCapture.m */; };
 		E1C5B4F7BFB14E978B303207 /* CDVCapture.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 07E94B4390664DF7BF2FC4E6 /* CDVCapture.bundle */; };
+		2D72F9ED868F43E8A62A71B6 /* CDVSound.m in Sources */ = {isa = PBXBuildFile; fileRef = F075C9F0E65042F7ACC872BB /* CDVSound.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +117,8 @@
 		0D89D71182D840A683C190F6 /* CDVCapture.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVCapture.m"; path = "org.apache.cordova.media-capture/CDVCapture.m"; sourceTree = "<group>"; fileEncoding = 4; };
 		C4A317B1E77E4D068ED85E49 /* CDVCapture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVCapture.h"; path = "org.apache.cordova.media-capture/CDVCapture.h"; sourceTree = "<group>"; fileEncoding = 4; };
 		07E94B4390664DF7BF2FC4E6 /* CDVCapture.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = "CDVCapture.bundle"; path = "CDVCapture.bundle"; sourceTree = "<group>"; };
+		F075C9F0E65042F7ACC872BB /* CDVSound.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVSound.m"; path = "org.apache.cordova.media/CDVSound.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		7DDECD98325E490C9599416E /* CDVSound.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVSound.h"; path = "org.apache.cordova.media/CDVSound.h"; sourceTree = "<group>"; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,6 +248,8 @@
 				653EE7A3A9BD4D049B10E7C2 /* CDVAssetLibraryFilesystem.h */,
 				0D89D71182D840A683C190F6 /* CDVCapture.m */,
 				C4A317B1E77E4D068ED85E49 /* CDVCapture.h */,
+				F075C9F0E65042F7ACC872BB /* CDVSound.m */,
+				7DDECD98325E490C9599416E /* CDVSound.h */,
 			);
 			name = Plugins;
 			path = "HelloCordova/Plugins";
@@ -444,6 +449,7 @@
 				D75A9441763A4D63A17B0DEA /* CDVLocalFilesystem.m in Sources */,
 				13E3F097924B4B0B8AEE7C4C /* CDVAssetLibraryFilesystem.m in Sources */,
 				9922880C9C94494BB592F95E /* CDVCapture.m in Sources */,
+				2D72F9ED868F43E8A62A71B6 /* CDVSound.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

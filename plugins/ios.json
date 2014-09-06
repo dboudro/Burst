@@ -37,6 +37,10 @@
                         {
                             "xml": "<feature name=\"Capture\"><param name=\"ios-package\" value=\"CDVCapture\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Media\"><param name=\"ios-package\" value=\"CDVSound\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -45,6 +49,9 @@
     },
     "installed_plugins": {
         "org.apache.cordova.media-capture": {
+            "PACKAGE_NAME": "io.cordova.hellocordova"
+        },
+        "org.apache.cordova.media": {
             "PACKAGE_NAME": "io.cordova.hellocordova"
         }
     },

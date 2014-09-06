@@ -12,4 +12,9 @@
       <param name="ios-package" value="CDVCapture" />
     </feature>
     <access origin="*" />
+    <key>Plugins</key>
+    <dict>
+        <key>Media</key>
+        <string>CDVSound</string>
+    </dict>
 </widget>
