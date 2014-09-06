@@ -17,7 +17,7 @@
  * under the License.
  */
 * {
-    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+  -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
 }
 
 .hidden {
@@ -25,95 +25,202 @@
 }
 
 body {
-    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
-    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
-    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
-    background-color:#E4E4E4;
-    background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
-    background-image:-webkit-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
-    background-image:-ms-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
-    background-image:-webkit-gradient(
-        linear,
-        left top,
-        left bottom,
-        color-stop(0, #A7A7A7),
-        color-stop(0.51, #E4E4E4)
-    );
-    background-attachment:fixed;
-    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
-    font-size:12px;
-    height:100%;
-    margin:0px;
-    padding:0px;
-    text-transform:uppercase;
-    width:100%;
+  -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+  -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+  -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+  background-color:#E4E4E4;
+  background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+  background-image:-webkit-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+  background-image:-ms-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+  background-image:-webkit-gradient(
+  linear,
+  left top,
+  left bottom,
+  color-stop(0, #A7A7A7),
+  color-stop(0.51, #E4E4E4)
+  );
+  background-attachment:fixed;
+  font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+  font-size:12px;
+  height:100%;
+  margin:0px;
+  padding:0px;
+  text-transform:uppercase;
+  width:100%;
 }
 
 /* Portrait layout (default) */
 .app {
-    background:url(../img/logo.png) no-repeat center top; /* 170px x 200px */
-    position:absolute;             /* position in the center of the screen */
-    left:50%;
-    top:50%;
-    height:50px;                   /* text area height */
-    width:225px;                   /* text area width */
-    text-align:center;
-    padding:180px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
-    margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
-                                   /* offset horizontal: half of text area width */
+  background:url(../img/logo.png) no-repeat center top; /* 170px x 200px */
+  position:absolute;             /* position in the center of the screen */
+  left:50%;
+  top:50%;
+  height:50px;                   /* text area height */
+  width:225px;                   /* text area width */
+  text-align:center;
+  padding:180px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
+  margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
+  /* offset horizontal: half of text area width */
 }
 
 /* Landscape layout (with min-width) */
 @media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
-    .app {
-        background-position:left center;
-        padding:75px 0px 75px 170px;  /* padding-top + padding-bottom + text area = image height */
-        margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
-                                      /* offset horizontal: half of image width and text area width */
-    }
+  .app {
+    background-position:left center;
+    padding:75px 0px 75px 170px;  /* padding-top + padding-bottom + text area = image height */
+    margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
+    /* offset horizontal: half of image width and text area width */
+  }
 }
 
 h1 {
-    font-size:24px;
-    font-weight:normal;
-    margin:0px;
-    overflow:visible;
-    padding:0px;
-    text-align:center;
+  font-size:24px;
+  font-weight:normal;
+  margin:0px;
+  overflow:visible;
+  padding:0px;
+  text-align:center;
 }
 
 .event {
-    border-radius:4px;
-    -webkit-border-radius:4px;
-    color:#FFFFFF;
-    font-size:12px;
-    margin:0px 30px;
-    padding:2px 0px;
+  border-radius:4px;
+  -webkit-border-radius:4px;
+  color:#FFFFFF;
+  font-size:12px;
+  margin:0px 30px;
+  padding:2px 0px;
 }
 
 .event.listening {
-    background-color:#333333;
-    display:block;
+  background-color:#333333;
+  display:block;
 }
 
 .event.received {
-    background-color:#4B946A;
-    display:none;
+  background-color:#4B946A;
+  display:none;
 }
 
 @keyframes fade {
-    from { opacity: 1.0; }
-    50% { opacity: 0.4; }
-    to { opacity: 1.0; }
+  from { opacity: 1.0; }
+  50% { opacity: 0.4; }
+  to { opacity: 1.0; }
 }
- 
+
 @-webkit-keyframes fade {
-    from { opacity: 1.0; }
-    50% { opacity: 0.4; }
-    to { opacity: 1.0; }
+  from { opacity: 1.0; }
+  50% { opacity: 0.4; }
+  to { opacity: 1.0; }
 }
- 
+
 .blink {
-    animation:fade 3000ms infinite;
-    -webkit-animation:fade 3000ms infinite;
+  animation:fade 3000ms infinite;
+  -webkit-animation:fade 3000ms infinite;
+}
+/* COLORS:
+#c0392b - dark red
+#E74C3C - light red
+#2C3E50	- dark blue
+#34495E - light blue
+#27AE60	- Dark Green
+#2ECC71 - Light Green
+ */
+/* * * * * * * * * * * * * * * * * INITIAL SETUP * * * * * * * * * * * * * * * */
+* {
+  margin:0;
+  padding:0;
+}
+@font-face {
+  font-family: essential;
+  src: url("fonts/essential-light.ttf");
+}
+@font-face {
+  font-family: Proxima Nova Bold;
+  src: url(fonts/ProximaNovaBold.ttf);
+}
+@font-face {
+  font-family: Proxima Nova;
+  src: url(fonts/ProximaNova-Regular.otf);
+}
+@font-face {
+  font-family: Proxima Nova Light;
+  src: url(fonts/ProximaNovaLight.otf);
+}
+@font-face {
+  font-family: Proxima Nova Thin;
+  src: url(fonts/ProximaNovaThin.otf);
+}
+/* * * * * * * * * * * * * * * * * GLOBAL STYLING * * * * * * * * * * * * * * * */
+.screen {
+  display: none;
+  height: 100vh;
+  width: 100vw;
+  background-color: #2C3E50;
+  text-align: center;
+}
+.tag {
+  font-family: Proxima Nova Light;
+  font-size: 14px;
+  background-color: #7F8C8D;
+  border-radius: 8px;
+  color: #ECF0F1;
+  padding: 2px 5px;
+  text-decoration: none;
+}
+.next{
+  position: fixed;
+  margin-top: 5px;
+  margin-left: 40vw;
+  opacity: .4;
+  font-family: Proxima Nova Light;
+  font-size: 14px;
+  background-color: #7F8C8D;
+  border-radius: 4px;
+  color: #ECF0F1;
+  padding: 2px 5px;
+  text-decoration: none;
+}
+.next:hover {
+  opacity: 1;
+}
+.tag:hover {
+  background-color: #657070;
+}
+.button {
+  height: 20vh;
+  margin: 0 auto 0 auto;
+  padding-top: 15vh;
+}
+/* 1 1 1 1 * * * * * * * * * * * * LOADING SCREEN * * * * * * * * * * * * * * * */
+#loading-screen {
+  display: block;
+}
+/* 2 2 2 2 * * * * * * * * * * * * * MAIN SCREEN * * * * * * * * * * * * * * * * */
+#main-screen {
+  /*	display: block; */
+}
+#play-button {
+  padding-top: 25vh;
+  display: block;
+}
+#record-buton {
+  display: block;
+}
+/* 3 3 3 3 * * * * * * * * * * * * * LISTEN SCREEN * * * * * * * * * * * * * * * * */
+#listen-screen {
+  /* display: block; */
+}
+#tag-box {
+  margin: 0 auto 0 auto;
+  padding: 5vh 0 8vh 0;
+}
+#stop-button {
+  /* FIX */
+  height: 165px;
+  padding-left: 20px;
+}
+#spectrum {
+  width: 100vw;
+  opacity: .5;
+  margin-top: 5vh;
 }
