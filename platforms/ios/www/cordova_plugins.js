@@ -64,6 +64,13 @@ module.exports = [
         ]
     },
     {
+        "file": "plugins/org.apache.cordova.device/www/device.js",
+        "id": "org.apache.cordova.device.device",
+        "clobbers": [
+            "device"
+        ]
+    },
+    {
         "file": "plugins/org.apache.cordova.file/www/DirectoryEntry.js",
         "id": "org.apache.cordova.file.DirectoryEntry",
         "clobbers": [
@@ -215,6 +222,7 @@ module.exports.metadata =
 {
     "org.apache.cordova.media-capture": "0.3.3-dev",
     "org.apache.cordova.media": "0.2.12",
+    "org.apache.cordova.device": "0.2.11",
     "org.apache.cordova.file": "1.3.0"
 }
 // BOTTOM OF METADATA
