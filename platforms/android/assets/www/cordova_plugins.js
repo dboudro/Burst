@@ -194,13 +194,21 @@ module.exports = [
         "clobbers": [
             "navigator.device.capture"
         ]
+    },
+    {
+        "file": "plugins/org.apache.cordova.device/www/device.js",
+        "id": "org.apache.cordova.device.device",
+        "clobbers": [
+            "device"
+        ]
     }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
 {
     "org.apache.cordova.file": "1.3.0",
-    "org.apache.cordova.media-capture": "0.3.3-dev"
+    "org.apache.cordova.media-capture": "0.3.3-dev",
+    "org.apache.cordova.device": "0.2.11"
 }
 // BOTTOM OF METADATA
 });

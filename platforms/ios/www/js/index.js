@@ -12,7 +12,30 @@ document.getElementById("record").onclick = function () {
   .then(function(savedFile) {
     console.log("got saved file: ", savedFile);
     var clip = new Parse.Object("Clip");
-    clip.set("wav", savedFile);
+    clip.set("device", device.uuid);
+    clip.set("upvotes", 0);
+    clip.set("file", savedFile);
     clip.save();
   });
 };
+
+var clips;
+function next() {
+  console.log("playing next");
+  if(!!clips[0])
+    document.getElementById("audio").src = clips.shift().get("file")._url;
+}
+document.getElementById("next").onclick = next;
+
+var Clip = Parse.Object.extend("Clip");
+var query = new Parse.Query(Clip);
+query.limit(10);
+query.descending("createdAt");
+query.notEqualTo("device", device.uuid);
+query.find()
+.then(function(_clips) {
+  document.getElementById("next").classList.remove("hidden");
+  clips = _clips;
+  next();
+});
+
