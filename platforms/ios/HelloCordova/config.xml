@@ -43,4 +43,6 @@
         <key>Media</key>
         <string>CDVSound</string>
     </dict>
+    <plugin name="File" value="CDVFile" />
+    <plugin name="FileTransfer" value="CDVFileTransfer" />
 </widget>
