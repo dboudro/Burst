@@ -1,7 +1,4 @@
-	$("#loading").click(function() {
-		$(".screen").css("display","none");
-		$("#loading-screen").show();
-		});
+
 	$("#main").click(function() {
 		$(".screen").css("display", "none");
 		$("#main-screen").show();

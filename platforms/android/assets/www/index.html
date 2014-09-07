@@ -12,25 +12,21 @@
 <body>
  <!-- - - - - - - - - - - - - - - DEVELOPER NAV - - - - - - - - - - - - -->
  <div id="navigation">
- <button id="loading" class="nav-button"> </button>
-  <button id="main" class="nav-button"> </button>
-   <button id="record" class="nav-button"> </button>
-    <button id="listen" class="nav-button"> </button>
+<a id="main" class="nav-button" href="#"> Main Page</a>
+   <a id="record" class="nav-button" href="#">Recording  </a>
+  <a id="listen" class="nav-button" href="#"> Listen</a>
      </div>
-  <!-- - - - - - - - - - - - - - - LOADING SCREEN - - - - - - - - - - - - -->
-  <div id="loading-screen" class="screen">
-    <div class="bubble big-bubble"></div>
-    <div class="bubble medium-bubble"></div>
-    <div class="bubble small-bubble"></div>
-
-  </div>
   <!-- - - - - - - - - - - - - - - MAIN SCREEN - - - - - - - - - - - - -->
   <div id="main-screen" class="screen">
-    <audio id="audio" controls="contorls" autoplay></audio><div> </div>
+    <audio id="audio" controls="controls" autoplay></audio><div> </div>
     <button id="record">record</button>
     <img id="play-button" class="button" src="img/play.png">
-    <img id="record-button" class="button"src="img/record.png">
+    <img id="record-button" class="button" src="img/record.png">
   </div>
+  <!-- - - - - - - - - - - - - - - RECORDING SCREEN - - - - - - - - - - - - -->
+<div id="recording-screen" class="screen">
+ <img id="stop-recording-button" class-"button" src="img/stop.png">
+</div>
   <!-- - - - - - - - - - - - - - - LISTEN SCREEN - - - - - - - - - - - - -->
   <div id="listen-screen" class="screen">
     <div id="tag-box">
@@ -50,10 +46,10 @@
   <script src="js/dev-nav.js"></script>
   <script src="js/promise.js"></script>
   <script src="js/parse.js"></script>
-  <script src="js/record_parse_file.js"></script>
   <script>
-  Parse.initialize("ia2zOg22XLuFrpYUQymWXaUOWtS3CtSE8C6uEzXJ", "Q0BHdrjBtJJS5tz2ulTXGLcMWo6wUc2p9txqgIHA");
+    Parse.initialize("ia2zOg22XLuFrpYUQymWXaUOWtS3CtSE8C6uEzXJ", "Q0BHdrjBtJJS5tz2ulTXGLcMWo6wUc2p9txqgIHA");
   </script>
+  <script src="js/record_parse_file.js"></script>
   <script type="text/javascript" src="js/index.js"></script>
 
 </body>

@@ -197,17 +197,7 @@ h1 {
   margin: 0 auto 0 auto;
   padding-top: 15vh;
 }
-/* 1 1 1 1 * * * * * * * * * * * * LOADING SCREEN * * * * * * * * * * * * * * * */
-#loading-screen {
-  display: block;
-}
-#loading-title {
-  text-align: center;
-  font-family: Proxima Nova;
-  font-size: 4em;
-  padding-top: 40vh;
-  color: #FFF;
-}
+
 /* 2 2 2 2 * * * * * * * * * * * * * MAIN SCREEN * * * * * * * * * * * * * * * * */
 #main-screen {
   /*	display: block; */

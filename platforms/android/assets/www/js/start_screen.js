@@ -1,7 +1,7 @@
 
 		/* * * * * * * * * * * * * * * * * * JAVASCRIPT * * * * * * * * * * * * * * * * */
 	
-
+var explosion = function { 
 var data = [5];
 	var width = window.innerWidth - 20;
 var height = window.innerHeight - 20;
@@ -82,4 +82,4 @@ function collide(node) {
   {
     force.gravity(-4.05);
   }, 3000);
-
+}

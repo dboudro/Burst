@@ -32,11 +32,17 @@
 /Users/Dboody/Desktop/burst/platforms/android/assets/www/cordova.js \
 /Users/Dboody/Desktop/burst/platforms/android/assets/www/cordova_plugins.js \
 /Users/Dboody/Desktop/burst/platforms/android/assets/www/css \
+/Users/Dboody/Desktop/burst/platforms/android/assets/www/fonts \
 /Users/Dboody/Desktop/burst/platforms/android/assets/www/img \
 /Users/Dboody/Desktop/burst/platforms/android/assets/www/index.html \
 /Users/Dboody/Desktop/burst/platforms/android/assets/www/js \
 /Users/Dboody/Desktop/burst/platforms/android/assets/www/plugins \
 /Users/Dboody/Desktop/burst/platforms/android/assets/www/css/index.css \
+/Users/Dboody/Desktop/burst/platforms/android/assets/www/fonts/essential-light.ttf \
+/Users/Dboody/Desktop/burst/platforms/android/assets/www/fonts/ProximaNova-Regular.otf \
+/Users/Dboody/Desktop/burst/platforms/android/assets/www/fonts/ProximaNovaBold.ttf \
+/Users/Dboody/Desktop/burst/platforms/android/assets/www/fonts/ProximaNovaLight.otf \
+/Users/Dboody/Desktop/burst/platforms/android/assets/www/fonts/ProximaNovaThin.otf \
 /Users/Dboody/Desktop/burst/platforms/android/assets/www/img/logo-blue.png \
 /Users/Dboody/Desktop/burst/platforms/android/assets/www/img/logo-turqoise.png \
 /Users/Dboody/Desktop/burst/platforms/android/assets/www/img/logo.png \
@@ -48,6 +54,7 @@
 /Users/Dboody/Desktop/burst/platforms/android/assets/www/img/stop.png \
 /Users/Dboody/Desktop/burst/platforms/android/assets/www/js/d3.v3.min.js \
 /Users/Dboody/Desktop/burst/platforms/android/assets/www/js/dev-nav.js \
+/Users/Dboody/Desktop/burst/platforms/android/assets/www/js/functions.js \
 /Users/Dboody/Desktop/burst/platforms/android/assets/www/js/index.js \
 /Users/Dboody/Desktop/burst/platforms/android/assets/www/js/jquery-2.1.1.min.js \
 /Users/Dboody/Desktop/burst/platforms/android/assets/www/js/parse.js \
