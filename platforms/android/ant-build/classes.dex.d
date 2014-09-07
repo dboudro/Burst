@@ -6,6 +6,7 @@
 /Users/Dboody/Desktop/burst/platforms/android/ant-build/classes/io/cordova/hellocordova/R$string.class \
 /Users/Dboody/Desktop/burst/platforms/android/ant-build/classes/io/cordova/hellocordova/R$xml.class \
 /Users/Dboody/Desktop/burst/platforms/android/ant-build/classes/io/cordova/hellocordova/R.class \
+/Users/Dboody/Desktop/burst/platforms/android/ant-build/classes/org/apache/cordova/device/Device.class \
 /Users/Dboody/Desktop/burst/platforms/android/ant-build/classes/org/apache/cordova/file/ContentFilesystem.class \
 /Users/Dboody/Desktop/burst/platforms/android/ant-build/classes/org/apache/cordova/file/DirectoryManager.class \
 /Users/Dboody/Desktop/burst/platforms/android/ant-build/classes/org/apache/cordova/file/EncodingException.class \

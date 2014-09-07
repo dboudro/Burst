@@ -187,11 +187,11 @@ svg.selectAll("circle")
 
 
 //////////// ANTI GRAVITY RECT ////////////
-var rectangle = svg.append("circle")
-    .attr("cx", function() { return width / 2 })
-    .attr("cy", function() { return height / 2})
-    .attr("r", 50);
-
+var rectangle = svg.append("rect")
+    .attr("x", function() { return width / 2 })
+    .attr("y", function() { return height / 2})
+    .attr("width", 50)
+    .attr("height", 50);
 force.on("tick", function(e) {
   var q = d3.geom.quadtree(nodes),
       i = 0,

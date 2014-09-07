@@ -132,23 +132,23 @@ h1 {
 }
 @font-face {
   font-family: essential;
-  src: url("fonts/essential-light.ttf");
+  src: url("../fonts/essential-light.ttf");
 }
 @font-face {
   font-family: Proxima Nova Bold;
-  src: url(fonts/ProximaNovaBold.ttf);
+  src: url("../fonts/ProximaNovaBold.ttf");
 }
 @font-face {
   font-family: Proxima Nova;
-  src: url(fonts/ProximaNova-Regular.otf);
+  src: url("../fonts/ProximaNova-Regular.otf");
 }
 @font-face {
   font-family: Proxima Nova Light;
-  src: url(fonts/ProximaNovaLight.otf);
+  src: url("../fonts/ProximaNovaLight.otf");
 }
 @font-face {
   font-family: Proxima Nova Thin;
-  src: url(fonts/ProximaNovaThin.otf);
+  src: url("../fonts/ProximaNovaThin.otf");
 }
 /* * * * * * * * * * * * * * * * * GLOBAL STYLING * * * * * * * * * * * * * * * */
 .screen {
@@ -167,18 +167,24 @@ h1 {
   padding: 2px 5px;
   text-decoration: none;
 }
-.next{
+#navigation {
+  margin-top: 10px;
   position: fixed;
-  margin-top: 5px;
-  margin-left: 40vw;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.nav-button{
+  float: left;
   opacity: .4;
   font-family: Proxima Nova Light;
-  font-size: 14px;
+  font-size: 18px;
   background-color: #7F8C8D;
   border-radius: 4px;
   color: #ECF0F1;
-  padding: 2px 5px;
+  padding: 2px 4px 2px 4px;
   text-decoration: none;
+  margin-left: 5px;
 }
 .next:hover {
   opacity: 1;
