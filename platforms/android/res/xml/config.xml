@@ -9,6 +9,9 @@
         <param name="android-package" value="org.apache.cordova.file.FileUtils" />
         <param name="onload" value="true" />
     </feature>
+    <feature name="Device">
+        <param name="android-package" value="org.apache.cordova.device.Device" />
+    </feature>
     <name>HelloCordova</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.
@@ -22,7 +25,6 @@
         <param name="ios-package" value="CDVCapture" />
     </feature>
     <access origin="*" />
-
     <key>Plugins</key>
     <dict>
         <key>Media</key>
@@ -30,8 +32,4 @@
     </dict>
     <plugin name="File" value="CDVFile" />
     <plugin name="FileTransfer" value="CDVFileTransfer" />
-
-    <feature name="Device">
-        <param name="android-package" value="org.apache.cordova.device.Device" />
-    </feature>
 </widget>

@@ -1,26 +1,55 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <meta name="msapplication-tap-highlight" content="no" />
-        <title>Hello World</title>
-    </head>
-    <body>
-        <p></p>
-        <button id="record">record</button>
-        <audio id="audio" controls="contorls" src="http://files.parsetfss.com/02e13038-7d6c-4fe9-8f57-aa0bf034f3df/tfss-4d3ecd8d-84ec-4eed-b889-d0c7687e7ea4-recording.wav" autoplay></audio>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script src="js/promise.js"></script>
-        <script src="js/parse.js"></script>
-        <script src="js/record_parse_file.js"></script>
-        <script>
-          Parse.initialize("ia2zOg22XLuFrpYUQymWXaUOWtS3CtSE8C6uEzXJ", "Q0BHdrjBtJJS5tz2ulTXGLcMWo6wUc2p9txqgIHA");
-        </script>
-        <script type="text/javascript" src="js/index.js"></script>
+<head>
+<meta charset="utf-8" />
+<meta name="format-detection" content="telephone=no" />
+<!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+<link rel="stylesheet" type="text/css" href="css/index.css" />
+<meta name="msapplication-tap-highlight" content="no" />
+<title>Hello World</title>
+</head>
+<body>
+  <!-- - - - - - - - - - - - - - - LOADING SCREEN - - - - - - - - - - - - -->
+  <div id="loading-screen" class="screen">
+    <a id="next1" href="#" class="next">Next</a>
+    <div class="bubble big-bubble"></div>
+    <div class="bubble medium-bubble"></div>
+    <div class="bubble small-bubble"></div>
 
-    </body>
+  </div>
+  <!-- - - - - - - - - - - - - - - MAIN SCREEN - - - - - - - - - - - - -->
+  <div id="main-screen" class="screen">
+    <audio id="audio" controls="contorls" autoplay></audio><div> </div>
+    <button id="record">record</button>
+    <button id="next" class="hidden">next</button>
+    <img id="play-button" class="button" src="img/play.png">
+    <img id="record-button" class="button"src="img/record.png">
+    <a id="next2" href="#" class="next">Next</a>
+  </div>
+  <!-- - - - - - - - - - - - - - - LISTEN SCREEN - - - - - - - - - - - - -->
+  <div id="listen-screen" class="screen">
+    <div id="tag-box">
+      <a href="#" class="tag">Funny</a>
+      <a href="#" class="tag">Annoying</a>
+      <a href="#" class="tag">Web-Design</a>
+      <a href="#" class="tag">Mom Gossip</a>
+    </div>
+    <img id="pause-button" class="button" src="img/pause.png">
+    <img id="stop-button" class-"button" src="img/stop.png">
+    <img id="spectrum" src="img/spectrum-gray.png">
+  </div>
+  <script type="text/javascript" src="cordova.js"></script>
+	<script src="js/jquery-2.1.1.min.js"> </script>
+	<script src="js/d3.v3.min.js"></script>
+  <script src="js/start_screen.js"></script>
+  <script src="js/promise.js"></script>
+  <script src="js/parse.js"></script>
+  <script src="js/record_parse_file.js"></script>
+  <script>
+  Parse.initialize("ia2zOg22XLuFrpYUQymWXaUOWtS3CtSE8C6uEzXJ", "Q0BHdrjBtJJS5tz2ulTXGLcMWo6wUc2p9txqgIHA");
+  </script>
+  <script type="text/javascript" src="js/index.js"></script>
+
+</body>
 </html>
