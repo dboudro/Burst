@@ -56,8 +56,8 @@ body {
 }
 #stop-button {
   /* FIX */
-  border-color: #FFFFFF;
-  border-width: 40px;
+  border-color: #000;
+  border-width: 8px;
   border-style: solid;
   height: 110px;
   width: 110px;
