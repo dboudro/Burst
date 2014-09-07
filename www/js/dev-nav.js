@@ -8,7 +8,7 @@
 		});
 	$("#record").click(function() {
 		$(".screen").css("display", "none");
-		$("#record-screen").show();
+		$("#recording-screen").show();
 		});
 	$("#listen").click(function() {
 		$(".screen").css("display", "none");

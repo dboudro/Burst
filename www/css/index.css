@@ -201,6 +201,13 @@ h1 {
 #loading-screen {
   display: block;
 }
+#loading-title {
+  text-align: center;
+  font-family: Proxima Nova;
+  font-size: 4em;
+  padding-top: 40vh;
+  color: #FFF;
+}
 /* 2 2 2 2 * * * * * * * * * * * * * MAIN SCREEN * * * * * * * * * * * * * * * * */
 #main-screen {
   /*	display: block; */
@@ -212,7 +219,14 @@ h1 {
 #record-buton {
   display: block;
 }
+
 /* 3 3 3 3 * * * * * * * * * * * * * LISTEN SCREEN * * * * * * * * * * * * * * * * */
+#recording-button {
+  display: block;
+  padding-top: 45vh;
+}
+
+/* 4 4 4 4 * * * * * * * * * * * * * LISTEN SCREEN * * * * * * * * * * * * * * * * */
 #listen-screen {
   /* display: block; */
 }
