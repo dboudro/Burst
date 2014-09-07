@@ -10,14 +10,7 @@
     <title>Hello World</title>
   </head>
   <script>
-  // Wait for device API libraries to load
-  //
-  document.addEventListener("deviceready", onDeviceReady, false);
-  // device APIs are available
-  //
-  function onDeviceReady() {
-  navigator.splashscreen.show();
-  }
+ navigator.splashscreen.show();
   </script>
   <body>
     <!-- - - - - - - - - - - - - - - MAIN SCREEN - - - - - - - - - - - - -->
@@ -46,6 +39,7 @@
       <div id="stop-button" ></div>
     </div>
     <script type="text/javascript" src="cordova.js"></script>
+    <script src="js/hammer.js" ></script>
     <script src="js/jquery-2.1.1.min.js"> </script>
     <script src="js/dev-nav.js"></script>
     <script src="js/promise.js"></script>

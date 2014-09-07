@@ -1,6 +1,9 @@
 console.log("LOADED");
 var mediaFile;
 
+var audioTag = document.getElementById("audio");
+var hr = document.getElementById("hr");
+var loop;
 function l(){console.log(arguments);}
 
 var lastClip;
@@ -26,15 +29,12 @@ function next() {
     }
   }
 
-  loop = setTimeout(function() {
+  loop = setInterval(function() {
     hr.style.width = ((audioTag.currentTime / audioTag.duration) * 100) + "%";
   }, 150);
 }
 
 getClips();
-var audioiTag = document.getElementById("audio");
-var hr = document.getElementById("hr");
-var loop;
 function burstStartRecording() {
   record_parse_file()
   .then(function(parseFile){
@@ -66,8 +66,8 @@ function burstPlay() {
 }
 
 function burstPausePlay() {
-  audioiTag.pause();
-  clearTimeout(loop);
+  audioTag.pause();
+  clearInterval(loop);
 }
 
 var burstStopPlay = burstPausePlay;
