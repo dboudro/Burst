@@ -18,5 +18,6 @@
         <string>CDVSound</string>
     </dict>
   <plugin name="File" value="CDVFile" />
+  <preference name="StatusBarBackgroundColor" value="#000000" />
   <plugin name="FileTransfer" value="CDVFileTransfer" />
 </widget>
