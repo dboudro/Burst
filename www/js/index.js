@@ -19,7 +19,6 @@ query.descending("createdAt");
 query.notEqualTo("device", device.uuid);
 query.find()
 .then(function(_clips) {
-  document.getElementById("next").classList.remove("hidden");
   clips = _clips;
 });
 
