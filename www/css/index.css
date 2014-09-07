@@ -56,11 +56,11 @@ body {
 }
 #stop-button {
   /* FIX */
-  border-color: #000;
-  border-width: 8px;
+  border-color: #FFF;
+  border-width: 20px;
   border-style: solid;
-  height: 110px;
-  width: 110px;
+  height: 130px;
+  width: 130px;
   margin: auto;
   margin-top: 100%;
 }
