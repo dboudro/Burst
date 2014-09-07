@@ -38,4 +38,3 @@ query.find()
   clips = _clips;
   next();
 });
-
