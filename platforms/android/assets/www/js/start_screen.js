@@ -1,13 +1,6 @@
 
 		/* * * * * * * * * * * * * * * * * * JAVASCRIPT * * * * * * * * * * * * * * * * */
-		$("#next1").click(function() {
-		$("#loading-screen").css("display","none");
-		$("#main-screen").show();
-		});
-					$("#next2").click(function() {
-		$("#main-screen").css("display","none");
-		$("#listen-screen").show();
-		});
+	
 
 var data = [5];
 	var width = window.innerWidth - 20;

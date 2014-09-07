@@ -167,10 +167,15 @@ h1 {
   padding: 2px 5px;
   text-decoration: none;
 }
-.next{
+#navigation {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.nav-button{
   position: fixed;
-  margin-top: 5px;
-  margin-left: 40vw;
+  margin-top: 10px;
   opacity: .4;
   font-family: Proxima Nova Light;
   font-size: 14px;
