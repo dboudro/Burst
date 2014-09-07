@@ -1,4 +1,20 @@
+////////////////// RECORDING SCREEN //////////////////
+$("#record-button")[0].ontouchstart = function() {
+	burstStartRecording();
+};
+
 $("#play-button")[0].ontouchstart = function() {
-		alert("hey")
-		burstStartRecording()
-		});
+	burstPlay()
+	$(".screen").css("display", "none");
+	$("#listen-screen").show();
+}
+////////////////// LISTENING SCREEN //////////////////
+$("#pause-button")[0].ontouchstart = function() {
+	burstPausePlay();
+};
+
+$("#stop-button")[0].ontouchstart = function() {
+	burstStopPlay();
+	$(".screen").css("display", "none");
+	$("#main-screen").show();
+};

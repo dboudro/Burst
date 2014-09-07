@@ -1,14 +1,7 @@
 
 		/* * * * * * * * * * * * * * * * * * JAVASCRIPT * * * * * * * * * * * * * * * * */
-		$("#next1").click(function() {
-		$("#loading-screen").css("display","none");
-		$("#main-screen").show();
-		});
-					$("#next2").click(function() {
-		$("#main-screen").css("display","none");
-		$("#listen-screen").show();
-		});
-
+	
+var explosion = function { 
 var data = [5];
 	var width = window.innerWidth - 20;
 var height = window.innerHeight - 20;
@@ -89,4 +82,4 @@ function collide(node) {
   {
     force.gravity(-4.05);
   }, 3000);
-
+}

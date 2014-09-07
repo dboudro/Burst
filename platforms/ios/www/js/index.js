@@ -3,22 +3,7 @@ var mediaFile;
 
 function l(){console.log(arguments);}
 
-document.getElementById("record").onclick = function () {
-  record_parse_file()
-  .then(function(parseFile){
-    console.log("got parse file: ". parseFile);
-    return parseFile.save();
-  },l)
-  .then(function(savedFile) {
-    console.log("got saved file: ", savedFile);
-    var clip = new Parse.Object("Clip");
-    clip.set("device", device.uuid);
-    clip.set("upvotes", 0);
-    clip.set("file", savedFile);
-    clip.save();
-  });
-};
-
+var lastClip;
 var clips;
 function next() {
   console.log("playing next");
@@ -29,12 +14,56 @@ document.getElementById("next").onclick = next;
 
 var Clip = Parse.Object.extend("Clip");
 var query = new Parse.Query(Clip);
-query.limit(10);
+query.limit(30);
 query.descending("createdAt");
 query.notEqualTo("device", device.uuid);
 query.find()
 .then(function(_clips) {
   document.getElementById("next").classList.remove("hidden");
   clips = _clips;
-  next();
 });
+
+function burstStartRecording() {
+  record_parse_file()
+  .then(function(parseFile){
+    console.log("got parse file: ". parseFile);
+    return parseFile.save();
+  },l)
+  .then(function(savedFile) {
+    console.log("got saved file: ", savedFile);
+    var clip = new Parse.Object("Clip");
+    clip.set("device", device.uuid);
+    clip.set("upvotes", 0);
+    clip.set("tags", []);
+    clip.set("file", savedFile);
+    lastClip = clip;
+    clip.save();
+  });
+}
+
+document.getElementById("record").onclick = burstStartRecording;
+
+function burstAddTag(tag) {
+  lastClip.addUnique("tags", tag);
+  return lastClip.save();
+}
+
+function burstPlay() {
+  next();
+}
+
+function burstPausePlay() {
+  docuemnt.getElementById("audio").pause();
+}
+
+var burstStopPlay = burstPausePlay;
+
+function burstUpVote() {
+  lastClip.increment("upvotes");
+  return lastClip.save();
+}
+
+function burstDownVote() {
+  lastClip.decrement("upvotes");
+  return lastClip.save();
+}

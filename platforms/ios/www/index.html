@@ -10,22 +10,23 @@
 <title>Hello World</title>
 </head>
 <body>
-  <!-- - - - - - - - - - - - - - - LOADING SCREEN - - - - - - - - - - - - -->
-  <div id="loading-screen" class="screen">
-    <a id="next1" href="#" class="next">Next</a>
-    <div class="bubble big-bubble"></div>
-    <div class="bubble medium-bubble"></div>
-    <div class="bubble small-bubble"></div>
-  </div>
+ <!-- - - - - - - - - - - - - - - DEVELOPER NAV - - - - - - - - - - - - -->
+ <div id="navigation">
+<a id="main" class="nav-button" href="#"> Main Page</a>
+   <a id="record" class="nav-button" href="#">Recording  </a>
+  <a id="listen" class="nav-button" href="#"> Listen</a>
+     </div>
   <!-- - - - - - - - - - - - - - - MAIN SCREEN - - - - - - - - - - - - -->
   <div id="main-screen" class="screen">
-    <audio id="audio" controls="contorls" autoplay></audio><div> </div>
+    <audio id="audio" controls="controls" autoplay></audio><div> </div>
     <button id="record">record</button>
-    <button id="next" class="hidden">next</button>
     <img id="play-button" class="button" src="img/play.png">
     <img id="record-button" class="button" src="img/record.png">
-    <a id="next2" href="#" class="next">Next</a>
   </div>
+  <!-- - - - - - - - - - - - - - - RECORDING SCREEN - - - - - - - - - - - - -->
+<div id="recording-screen" class="screen">
+ <img id="stop-recording-button" class-"button" src="img/stop.png">
+</div>
   <!-- - - - - - - - - - - - - - - LISTEN SCREEN - - - - - - - - - - - - -->
   <div id="listen-screen" class="screen">
     <div id="tag-box">
@@ -40,8 +41,7 @@
   </div>
   <script type="text/javascript" src="cordova.js"></script>
 	<script src="js/jquery-2.1.1.min.js"> </script>
-	<script src="js/d3.v3.min.js"></script>
-  <script src="js/start_screen.js"></script>
+  <script src="js/dev-nav.js"></script>
   <script src="js/promise.js"></script>
   <script src="js/parse.js"></script>
   <script>
@@ -49,6 +49,7 @@
   </script>
   <script src="js/record_parse_file.js"></script>
   <script type="text/javascript" src="js/index.js"></script>
+  <script src="js/functions.js"></script>
 
 </body>
 </html>
