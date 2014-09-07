@@ -10,7 +10,7 @@
     </author>
      <icon src="www/res/icons/icon.png"  platform="ios" width="48" height="48" density="mdpi" />
 
-     <feature name="SplashScreen">
+   <feature name="SplashScreen">
     <param name="ios-package" value="CDVSplashScreen" />
 </feature>
 
