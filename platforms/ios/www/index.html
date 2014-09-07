@@ -1,57 +1,60 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8" />
-<meta name="format-detection" content="telephone=no" />
-<!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-<link rel="stylesheet" type="text/css" href="css/index.css" />
-<meta name="msapplication-tap-highlight" content="no" />
-<title>Hello World</title>
-</head>
-<body>
-<!-- - - - - - - - - - - - - - - MAIN SCREEN - - - - - - - - - - - - -->
-<div id="main-screen" class="screen">
-  <audio id="audio" class="hidden"  autoplay></audio><div> </div>
-  <img id="play-button" class="button" src="img/play.png">
-  <img id="record-button" class="button" src="img/record.png">
-</div>
-<!-- - - - - - - - - - - - - - - RECORDING SCREEN - - - - - - - - - - - - -->
-<div id="recording-screen" class="hidden screen">
-  <img id="stop-recording-button" class-"button" src="img/stop.png">
-</div>
-<!-- - - - - - - - - - - - - - - LISTEN SCREEN - - - - - - - - - - - - -->
-<div id="listen-screen" class="hidden screen">
-
-  <!-- - - - - - - - - - - - - - - Tags SCREEN - - - - - - - - - - - - -->
-  <div id="tag-area" class="tag-area">
-    <input class="tag"></input>
-    <div class="tag">test-tag</div>
-    <div class="tag">test-tag</div>
-    <div class="tag">test-tag</div>
-    <div class="tag">test-tag</div>
-  </div>
-
-  <div class="slider-wrapper">
-    <hr id="hr" class="hr" noshade />
-  </div>
-
-
-  <div id="stop-button" ></div>
-
-
-</div>
-  <script type="text/javascript" src="cordova.js"></script>
-	<script src="js/jquery-2.1.1.min.js"> </script>
-  <script src="js/dev-nav.js"></script>
-  <script src="js/promise.js"></script>
-  <script src="js/parse.js"></script>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <title>Hello World</title>
+  </head>
   <script>
-    Parse.initialize("ia2zOg22XLuFrpYUQymWXaUOWtS3CtSE8C6uEzXJ", "Q0BHdrjBtJJS5tz2ulTXGLcMWo6wUc2p9txqgIHA");
+  // Wait for device API libraries to load
+  //
+  document.addEventListener("deviceready", onDeviceReady, false);
+  // device APIs are available
+  //
+  function onDeviceReady() {
+  navigator.splashscreen.show();
+  }
   </script>
-  <script src="js/record_parse_file.js"></script>
-  <script type="text/javascript" src="js/index.js"></script>
-  <script src="js/functions.js"></script>
-
-</body>
+  <body>
+    <!-- - - - - - - - - - - - - - - MAIN SCREEN - - - - - - - - - - - - -->
+    <div id="main-screen" class="screen">
+      <audio id="audio" class="hidden"  autoplay></audio><div> </div>
+      <img id="play-button" class="button" src="img/play.png">
+      <img id="record-button" class="button" src="img/record.png">
+    </div>
+    <!-- - - - - - - - - - - - - - - RECORDING SCREEN - - - - - - - - - - - - -->
+    <div id="recording-screen" class="hidden screen">
+      <img id="stop-recording-button" class-"button" src="img/stop.png">
+    </div>
+    <!-- - - - - - - - - - - - - - - LISTEN SCREEN - - - - - - - - - - - - -->
+    <div id="listen-screen" class="hidden screen">
+      <!-- - - - - - - - - - - - - - - Tags SCREEN - - - - - - - - - - - - -->
+      <div id="tag-area" class="tag-area">
+        <input id="tag-input" class="tag"></input>
+        <div class="tag">test-tag</div>
+        <div class="tag">test-tag</div>
+        <div class="tag">test-tag</div>
+        <div class="tag">test-tag</div>
+      </div>
+      <div class="slider-wrapper">
+        <hr id="hr" class="hr" noshade />
+      </div>
+      <div id="stop-button" ></div>
+    </div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script src="js/jquery-2.1.1.min.js"> </script>
+    <script src="js/dev-nav.js"></script>
+    <script src="js/promise.js"></script>
+    <script src="js/parse.js"></script>
+    <script>
+    Parse.initialize("ia2zOg22XLuFrpYUQymWXaUOWtS3CtSE8C6uEzXJ", "Q0BHdrjBtJJS5tz2ulTXGLcMWo6wUc2p9txqgIHA");
+    </script>
+    <script src="js/record_parse_file.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script src="js/functions.js"></script>
+  </body>
 </html>

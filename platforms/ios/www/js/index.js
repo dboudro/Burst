@@ -66,7 +66,7 @@ function burstPlay() {
 }
 
 function burstPausePlay() {
-  docuemnt.getElementById("audio").pause();
+  audioiTag.pause();
   clearTimeout(loop);
 }
 

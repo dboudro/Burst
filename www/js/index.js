@@ -27,8 +27,8 @@ function next() {
   }
 
   loop = setTimeout(function() {
-    hr.style.width = ((audio.currentTime / audio.duration) * 100) + "%";
-  }, 400);
+    hr.style.width = ((audioTag.currentTime / audioTag.duration) * 100) + "%";
+  }, 150);
 }
 
 getClips();
@@ -66,7 +66,7 @@ function burstPlay() {
 }
 
 function burstPausePlay() {
-  docuemnt.getElementById("audio").pause();
+  audioiTag.pause();
   clearTimeout(loop);
 }
 

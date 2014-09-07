@@ -28,7 +28,7 @@ $("#stop-button")[0].ontouchstart = function() {
 };
 
 ///////////////////// TAG SCREEN /////////////////////
-function() {
-	$("#input-tag").css("display","none");
-	$("#tag-area").prepend("<div class="tag">test-tag</div>");
-}
+//function() {
+//  $("#input-tag").css("display","none");
+//  $("#tag-area").prepend("<div class="tag">test-tag</div>");
+//}
