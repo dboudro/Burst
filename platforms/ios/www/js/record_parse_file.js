@@ -25,8 +25,8 @@ function record_parse_file() {
         }, l);
       },l);
 
-      m = new Media(mediaFile[0].fullPath);
-      m.play();
+      //m = new Media(mediaFile[0].fullPath);
+      //m.play();
     }
     navigator.device.capture.captureAudio(
       captureSuccess, l, {}

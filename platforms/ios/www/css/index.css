@@ -1,5 +1,6 @@
 * {
   -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+  font-family: "Avenir", "Lucida Console";
 }
 
 .hidden {
@@ -21,15 +22,6 @@ body {
   height: 100%;
   width: 100%;
   text-align: center;
-}
-.tag {
-  font-family: Proxima Nova Light;
-  font-size: 14px;
-  background-color: #7F8C8D;
-  border-radius: 8px;
-  color: #ECF0F1;
-  padding: 2px 5px;
-  text-decoration: none;
 }
 
 /* 2 2 2 2 * * * * * * * * * * * * * MAIN SCREEN * * * * * * * * * * * * * * * * */
@@ -64,6 +56,43 @@ body {
 }
 #stop-button {
   /* FIX */
-  height: 165px;
-  padding-left: 20px;
+  border-color: #FFFFFF;
+  border-width: 40px;
+  border-style: solid;
+  height: 110px;
+  width: 110px;
+  margin: auto;
+  margin-top: 100%;
+}
+
+.tag {
+  color: white;
+  padding: 8px;
+  border-radius: 8px;
+  border-color: white;
+  border-style: solid;
+  border-width: 1px;
+  display: inline-block;
+  margin: 4px;
+}
+
+#tag-area {
+  margin: 10%;
+  position: absolute;
+  top: 10px;
+}
+
+.slider-wrapper {
+  top: 240px;
+  position: absolute;
+  margin: 20px;
+  width: calc(100% - 40px);
+  left: 10px;
+}
+
+.hr {
+  width: 1%;
+  left:0px;
+  position: absolute;
+  border-color: white;
 }
