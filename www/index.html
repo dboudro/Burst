@@ -20,8 +20,11 @@
   </div>
   <!-- - - - - - - - - - - - - - - MAIN SCREEN - - - - - - - - - - - - -->
   <div id="main-screen" class="screen">
-    <img id="play-button" class="button" src="images/play.png">
-    <img id="record-button" class="button"src="images/record.png">
+    <audio id="audio" controls="contorls" autoplay></audio><div> </div>
+    <button id="record">record</button>
+    <button id="next" class="hidden">next</button>
+    <img id="play-button" class="button" src="img/play.png">
+    <img id="record-button" class="button"src="img/record.png">
     <a id="next2" href="#" class="next">Next</a>
   </div>
   <!-- - - - - - - - - - - - - - - LISTEN SCREEN - - - - - - - - - - - - -->
@@ -32,14 +35,14 @@
       <a href="#" class="tag">Web-Design</a>
       <a href="#" class="tag">Mom Gossip</a>
     </div>
-    <img id="pause-button" class="button" src="images/pause.png">
-    <img id="stop-button" class-"button" src="images/stop.png">
-    <img id="spectrum" src="images/spectrum-gray.png">
+    <img id="pause-button" class="button" src="img/pause.png">
+    <img id="stop-button" class-"button" src="img/stop.png">
+    <img id="spectrum" src="img/spectrum-gray.png">
   </div>
-  <audio id="audio" controls="contorls" autoplay></audio><div> </div>
-  <button id="record">record</button>
-  <button id="next" class="hidden">next</button>
   <script type="text/javascript" src="cordova.js"></script>
+	<script src="js/jquery-2.1.1.min.js"> </script>
+	<script src="js/d3.v3.min.js"></script>
+  <script src="js/start_screen.js"></script>
   <script src="js/promise.js"></script>
   <script src="js/parse.js"></script>
   <script src="js/record_parse_file.js"></script>
