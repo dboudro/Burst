@@ -12,13 +12,26 @@
     <feature name="Device">
         <param name="android-package" value="org.apache.cordova.device.Device" />
     </feature>
-    <name>HelloCordova</name>
+    <feature name="StatusBar">
+        <param name="android-package" onload="true" value="org.apache.cordova.statusbar.StatusBar" />
+    </feature>
+    <icon density="mdpi" src="www/res/icons/icon.png" />
+    <icon density="hdpi" src="www/res/icons/icon.png" />
+    <icon density="xhdpi" src="www/res/icons/icon.png" />
+    <icon density="ldpi" src="www/res/icons/icon.png" />
+    <name>Burst</name>
     <description>
-        A sample Apache Cordova application that responds to the deviceready event.
+        Expand your Social Interaction by listening in on anonymous conversations
     </description>
-    <author email="dev@cordova.apache.org" href="http://cordova.io">
-        Apache Cordova Team
+    <author email="dylanrboudro@gmail.com" href="http://dboody.com">
+        Deepp P. | Dylan B. | Franny L.
     </author>
+    <icon density="mdpi" height="48" platform="ios" src="www/res/icons/icon.png" width="48" />
+    <feature name="SplashScreen">
+        <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
+        <param name="ios-package" value="CDVSplashScreen" />
+        <param name="android-package" src="Resources/splash/screen-iphone-portrait-2x.png" value="org.apache.cordova.splashscreen.SplashScreen" />
+    </feature>
     <content src="index.html" />
     <feature name="Capture">
         <param name="android-package" value="org.apache.cordova.mediacapture.Capture" />
@@ -31,11 +44,7 @@
         <string>CDVSound</string>
     </dict>
     <plugin name="File" value="CDVFile" />
+    <preference name="StatusBarBackgroundColor" value="#111111" />
+    <preference name="AutoHideSplashScreen" value="false" />
     <plugin name="FileTransfer" value="CDVFileTransfer" />
-    <feature name="StatusBar">
-        <param name="android-package" onload="true" value="org.apache.cordova.statusbar.StatusBar" />
-    </feature>
-    <feature name="SplashScreen">
-        <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
-    </feature>
 </widget>

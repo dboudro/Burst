@@ -1,2 +1,2 @@
-/Users/Dboody/Desktop/Burst/platforms/android/ant-build/AndroidManifest.xml : \
-/Users/Dboody/Desktop/Burst/platforms/android/AndroidManifest.xml \
+/Users/Dboody/Desktop/burst/platforms/android/ant-build/AndroidManifest.xml : \
+/Users/Dboody/Desktop/burst/platforms/android/AndroidManifest.xml \

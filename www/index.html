@@ -7,9 +7,19 @@
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
     <link rel="stylesheet" type="text/css" href="css/index.css" />
     <meta name="msapplication-tap-highlight" content="no" />
-    <title>Hello World</title>
+    <title>Burst</title>
   </head>
   <script>
+   // Wait for device API libraries to load
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // device APIs are available
+    //
+    function onDeviceReady() {
+        navigator.splashscreen.show();
+    }
+
   </script>
   <body>
     <!-- - - - - - - - - - - - - - - MAIN SCREEN - - - - - - - - - - - - -->

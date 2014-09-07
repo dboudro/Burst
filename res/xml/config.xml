@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="io.cordova.hellocordova" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+      <icon src="www/res/icons/icon.png" />
+    <name>Burst</name>
+    <description>
+        Expand your Social Interaction by listening in on anonymous conversations
+    </description>
+    <author email="dylanrboudro@gmail.com" href="http://dboody.com">
+        Deepp P. | Dylan B. | Franny L.
+    </author>
+     <icon src="www/res/icons/icon.png"  platform="ios" width="48" height="48" density="mdpi" />
+
+   <feature name="SplashScreen">
+    <param name="ios-package" value="CDVSplashScreen" />
+</feature>
+<feature name="SplashScreen">
+    <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
+</feature>
+
+    <content src="index.html" />
+    <feature name="Capture">
+      <param name="ios-package" value="CDVCapture" />
+    </feature>
+    <access origin="*" />
+    <key>Plugins</key>
+    <dict>
+        <key>Media</key>
+        <string>CDVSound</string>
+    </dict>
+  <plugin name="File" value="CDVFile" />
+  <preference name="StatusBarBackgroundColor" value="#111111" />
+  <plugin name="FileTransfer" value="CDVFileTransfer" />
+</widget>

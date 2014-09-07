@@ -9,9 +9,22 @@
         Deepp P. | Dylan B. | Franny L.
     </author>
      <icon src="www/res/icons/icon.png"  platform="ios" width="48" height="48" density="mdpi" />
-
+        
+          <platform name="android">
+              <icon src="www/res/icons/icon.png" density="ldpi" />
+             <icon src="www/res/icons/icon.png" density="mdpi" />
+               <icon src="www/res/icons/icon.png"  density="hdpi" />
+              <icon src="www/res/icons/icon.png"  density="xhdpi" />
+     </platform>
+ 
+   <feature name="SplashScreen">
+    <param name="ios-package" value="CDVSplashScreen" src="Resources/splash/screen-iphone-portrait-568h-2x.png" />
+</feature>
    <feature name="SplashScreen">
     <param name="ios-package" value="CDVSplashScreen" />
+</feature>
+<feature name="SplashScreen">
+    <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" src="Resources/splash/screen-iphone-portrait-2x.png" />
 </feature>
 
     <content src="index.html" />
@@ -26,5 +39,6 @@
     </dict>
   <plugin name="File" value="CDVFile" />
   <preference name="StatusBarBackgroundColor" value="#111111" />
+  <preference name="AutoHideSplashScreen" value="false" />
   <plugin name="FileTransfer" value="CDVFileTransfer" />
 </widget>
