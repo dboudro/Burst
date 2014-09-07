@@ -1,3 +1,3 @@
-$("#play-button").click(function() {
-		burstStartRecord()
+$("#play-button")[0].ontouchstart(function() {
+		burstStartRecording()
 		});
