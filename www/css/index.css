@@ -105,6 +105,9 @@ position: absolute;
 left: 110px;
 width: 50px;
 top: 116px;
+text-align: center;
+margin-left: auto;
+margin-right: auto;
 }
 
 #voteup {
