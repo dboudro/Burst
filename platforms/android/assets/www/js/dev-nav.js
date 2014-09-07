@@ -1,14 +1,18 @@
-
-	$("#main").click(function() {
+goToHomecreen = function() {
 		$(".screen").css("display", "none");
 		$("#main-screen").show();
-		});
-	$("#record").click(function() {
+};
+goToRecordingScreen	= function() {
 		$(".screen").css("display", "none");
 		$("#recording-screen").show();
-		});
-	$("#listen").click(function() {
+};
+goToListeningScreen = function() {
 		$(".screen").css("display", "none");
 		$("#listen-screen").show();
-		});
-			
+};
+
+document.getElementById('stop-button').ontouchstart = function() {
+  goToHomecreen();
+};
+
+
