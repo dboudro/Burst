@@ -10,16 +10,14 @@ function next() {
   if(!!clips[0])
     document.getElementById("audio").src = clips.shift().get("file")._url;
 }
-document.getElementById("next").onclick = next;
 
 var Clip = Parse.Object.extend("Clip");
 var query = new Parse.Query(Clip);
 query.limit(30);
 query.descending("createdAt");
-query.notEqualTo("device", device.uuid);
+query.notEqualTo("device", (window.device||{uuid: Math.random + ''}).uuid);
 query.find()
 .then(function(_clips) {
-  document.getElementById("next").classList.remove("hidden");
   clips = _clips;
 });
 
@@ -41,7 +39,6 @@ function burstStartRecording() {
   });
 }
 
-document.getElementById("record").onclick = burstStartRecording;
 
 function burstAddTag(tag) {
   lastClip.addUnique("tags", tag);

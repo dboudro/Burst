@@ -10,35 +10,28 @@
 <title>Hello World</title>
 </head>
 <body>
- <!-- - - - - - - - - - - - - - - DEVELOPER NAV - - - - - - - - - - - - -->
- <div id="navigation">
-<a id="main" class="nav-button" href="#"> Main Page</a>
-   <a id="record" class="nav-button" href="#">Recording  </a>
-  <a id="listen" class="nav-button" href="#"> Listen</a>
-     </div>
-  <!-- - - - - - - - - - - - - - - MAIN SCREEN - - - - - - - - - - - - -->
-  <div id="main-screen" class="screen">
-    <audio id="audio" controls="controls" autoplay></audio><div> </div>
-    <button id="record">record</button>
-    <img id="play-button" class="button" src="img/play.png">
-    <img id="record-button" class="button" src="img/record.png">
-  </div>
-  <!-- - - - - - - - - - - - - - - RECORDING SCREEN - - - - - - - - - - - - -->
-<div id="recording-screen" class="screen">
- <img id="stop-recording-button" class-"button" src="img/stop.png">
+<!-- - - - - - - - - - - - - - - MAIN SCREEN - - - - - - - - - - - - -->
+<div id="main-screen" class="screen">
+  <audio id="audio" class="hidden"  autoplay></audio><div> </div>
+  <img id="play-button" class="button" src="img/play.png">
+  <img id="record-button" class="button" src="img/record.png">
 </div>
-  <!-- - - - - - - - - - - - - - - LISTEN SCREEN - - - - - - - - - - - - -->
-  <div id="listen-screen" class="screen">
-    <div id="tag-box">
-      <a href="#" class="tag">Funny</a>
-      <a href="#" class="tag">Annoying</a>
-      <a href="#" class="tag">Web-Design</a>
-      <a href="#" class="tag">Mom Gossip</a>
-    </div>
-    <img id="pause-button" class="button" src="img/pause.png">
-    <img id="stop-button" class-"button" src="img/stop.png">
-    <img id="spectrum" src="img/spectrum-gray.png">
+<!-- - - - - - - - - - - - - - - RECORDING SCREEN - - - - - - - - - - - - -->
+<div id="recording-screen" class="hidden screen">
+  <img id="stop-recording-button" class-"button" src="img/stop.png">
+</div>
+<!-- - - - - - - - - - - - - - - LISTEN SCREEN - - - - - - - - - - - - -->
+<div id="listen-screen" class="hidden screen">
+  <div id="tag-box">
+    <a href="#" class="tag">Funny</a>
+    <a href="#" class="tag">Annoying</a>
+    <a href="#" class="tag">Web-Design</a>
+    <a href="#" class="tag">Mom Gossip</a>
   </div>
+  <img id="pause-button" class="button" src="img/pause.png">
+  <img id="stop-button" class-"button" src="img/stop.png">
+</div>
+
   <script type="text/javascript" src="cordova.js"></script>
 	<script src="js/jquery-2.1.1.min.js"> </script>
   <script src="js/dev-nav.js"></script>
