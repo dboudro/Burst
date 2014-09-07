@@ -221,9 +221,11 @@ h1 {
 }
 
 /* 3 3 3 3 * * * * * * * * * * * * * LISTEN SCREEN * * * * * * * * * * * * * * * * */
-#recording-button {
+#stop-recording-button {
   display: block;
-  padding-top: 45vh;
+  padding-top: 40vh;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* 4 4 4 4 * * * * * * * * * * * * * LISTEN SCREEN * * * * * * * * * * * * * * * * */
