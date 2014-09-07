@@ -1,6 +1,9 @@
 console.log("LOADED");
+function twodec(num3){
+return parseFloat(Math.round(num3 * 100) / 100).toFixed(2);
+}
 var mediaFile;
-
+var taps = 1;
 var audioTag = document.getElementById("audio");
 var hr = document.getElementById("hr");
 var loop;
@@ -17,13 +20,15 @@ function getClips() {
   query.notEqualTo("device", (window.device||{uuid: Math.random + ''}).uuid);
   query.find()
   .then(function(_clips) {
-    B
     clips = _clips;
   });
 }
 function next() {
+  taps = 1;
   console.log("playing next");
   if(!!clips[0]) {
+    lastClip = clips[0];
+    document.getElementById("upvotes").innerHTML = twodec(clips[0].get("upvotes"));
     document.getElementById("audio").src = clips.shift().get("file")._url;
     if(clips.length < 3) {
       getClips();
@@ -79,6 +84,24 @@ function burstUpVote() {
 }
 
 function burstDownVote() {
-  lastClip.decrement("upvotes");
+  lastClip.increment("upvotes", -1);
   return lastClip.save();
 }
+
+$("#stop-button")[0].ontouchstart = function() {
+  burstPausePlay();
+  audioTag.pause();
+	$(".screen").css("display", "none");
+	$("#main-screen").show();
+};
+
+document.getElementById('voteup').ontouchstart = function () {
+  burstUpVote();
+  document.getElementById("upvotes").innerHTML = twodec(parseInt(document.getElementById("upvotes").innerHTML) + 1/taps);
+  taps++;
+};
+document.getElementById('votedown').ontouchstart = function () {
+  burstDownVote();
+  document.getElementById("upvotes").innerHTML = twodec(parseInt(document.getElementById("upvotes").innerHTML) -1/taps);
+  taps++;
+};

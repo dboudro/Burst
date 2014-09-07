@@ -22,7 +22,8 @@ $("#pause-button")[0].ontouchstart = function() {
 };
 
 $("#stop-button")[0].ontouchstart = function() {
-	burstStopPlay();
+  burstPausePlay();
+  audioTag.pause();
 	$(".screen").css("display", "none");
 	$("#main-screen").show();
 };
