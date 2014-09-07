@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="io.cordova.hellocordova" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
       <icon src="www/res/icons/icon.png" />
-    <name>Burst </name>
+    <name>Burst</name>
     <description>
         Expand your Social Interaction by listening in on anonymous conversations
     </description>
@@ -9,6 +9,11 @@
         Deepp P. | Dylan B. | Franny L.
     </author>
      <icon src="www/res/icons/icon.png"  platform="ios" width="48" height="48" density="mdpi" />
+
+     <feature name="SplashScreen">
+    <param name="ios-package" value="CDVSplashScreen" />
+</feature>
+
     <content src="index.html" />
     <feature name="Capture">
       <param name="ios-package" value="CDVCapture" />

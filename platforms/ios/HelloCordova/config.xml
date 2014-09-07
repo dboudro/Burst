@@ -55,4 +55,8 @@
     <plugin name="File" value="CDVFile" />
     <preference name="StatusBarBackgroundColor" value="#111111" />
     <plugin name="FileTransfer" value="CDVFileTransfer" />
+    <feature name="SplashScreen">
+        <param name="ios-package" value="CDVSplashScreen" />
+        <param name="onload" value="true" />
+    </feature>
 </widget>

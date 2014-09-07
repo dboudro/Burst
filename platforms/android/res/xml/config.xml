@@ -35,4 +35,7 @@
     <feature name="StatusBar">
         <param name="android-package" onload="true" value="org.apache.cordova.statusbar.StatusBar" />
     </feature>
+    <feature name="SplashScreen">
+        <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
+    </feature>
 </widget>

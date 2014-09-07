@@ -208,6 +208,13 @@ module.exports = [
         "clobbers": [
             "window.StatusBar"
         ]
+    },
+    {
+        "file": "plugins/org.apache.cordova.splashscreen/www/splashscreen.js",
+        "id": "org.apache.cordova.splashscreen.SplashScreen",
+        "clobbers": [
+            "navigator.splashscreen"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -216,7 +223,8 @@ module.exports.metadata =
     "org.apache.cordova.file": "1.3.0",
     "org.apache.cordova.media-capture": "0.3.3-dev",
     "org.apache.cordova.device": "0.2.11",
-    "org.apache.cordova.statusbar": "0.1.7"
+    "org.apache.cordova.statusbar": "0.1.7",
+    "org.apache.cordova.splashscreen": "0.3.2"
 }
 // BOTTOM OF METADATA
 });
